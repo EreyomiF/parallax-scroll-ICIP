@@ -1,0 +1,216 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.parallax-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    transform: translate3d(0, 0, 0);
+}
+
+.content {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+/* Add background images to .parallax-bg for each section (section1, section2, etc.) */
+#section1 .parallax-bg {
+    background-image: url('./images/528571-sunflower-desktop-wallpaper-1920x1080-smartphone.jpg');
+
+}
+
+#section2 .parallax-bg {
+    background-image: url('./images/desktopnexus-sunflowers-summer-wallpaper-58d554be3df78c516232fd1b.jpg');
+}
+
+#section3 .parallax-bg {
+    background-image: url('./images/flowers-nature-plants-summer.jpg');
+}
+
+#section4 .parallax-bg {
+    background-image: url('./images/HD-wallpaper-sunrise-daisy-field-sun-fresh-sunlight-sky-daisies-chamomiles-bright-flowers-sunrise-morning-field.jpg');
+}
+
+/* Default styles for the navigation bar */
+.navbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(103, 101, 101); /* Set the background color to transparent */
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    padding: 10px;
+}
+
+/* Add this CSS for navigation bar links hover effect */
+.navbar a:hover {
+    color: #4cec0c; /* Change the color to your desired hover color */
+    /* You can also add other styles like background-color or text-decoration if desired */
+}
+
+.navbar a {
+    color: #fae505;
+    text-decoration: none;
+    
+}
+
+/* Media query for screens up to 320px wide (small screens) */
+@media screen and (max-width: 320px) {
+    /* Styles for the navigation bar on small screens */
+    .navbar {
+        height: 40px; /* Set a smaller height for the navigation bar */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Decrease font size for small screens */
+    }
+}
+
+/* Style for the footer container */
+/* Style for the footer container with reduced height and spacing */
+.footer {
+    position: sticky;
+    bottom: 0;
+    background-color: #333; /* Footer background color */
+    color: rgb(244, 221, 14); /* Footer text color */
+    padding: 5px 0; /* Reduced padding at the top and bottom of the footer */
+    height: 30px; /* Smaller height for the footer */
+}
+
+/* Style for the content within the footer */
+.footer-content {
+    max-width: 960px; /* Limit the content width */
+    margin: 0 auto; /* Center the content horizontally */
+    text-align: center; /* Center-align the text */
+}
+
+.footer-content p {
+    margin: 0; /* Remove default margin for paragraphs */
+}
+
+.footer-content ul {
+    list-style: none; /* Remove list bullets */
+    padding: 0; /* Remove default padding for lists */
+}
+
+.footer-content ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 10px; /* Reduced spacing between list items */
+}
+
+.footer-content ul li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+}
+
+/* Style for the footer link with the same background color as the copyright text */
+.footer-content ul li a {
+    text-decoration: none;
+    color: #FFD700; /* Link color */
+    background-color: #333; /* Background color (same as the copyright text) */
+}
+
+.footer-content ul li a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+#section1 .content {
+    background: url('./images/istockphoto-162433466-612x612.jpg') center/cover no-repeat fixed;
+}
+
+#section2 .content {
+    background: url('./images/purple-flowers-839594_640.jpg') center/cover no-repeat fixed;
+}
+
+#section3 .content {
+    background: url('./images/pexels-anton-atanasov-364091.jpg')center/cover no-repeat fixed;
+}
+
+#section4 .content {
+    background: url('./images/rose-165819_640.jpg') center/cover no-repeat fixed;
+}
+
+/* Repeat for other sections as needed */
+.content {
+    z-index: 2;
+    background-image: url('path-to-your-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+/* Default styles for the content container */
+@media screen and (min-width: 769px) {
+    .content {
+        height: 300px; /* Set the height for large screens */
+    }
+}
+
+/* Media query for screens up to 768px wide (small screens) */
+@media screen and (max-width: 768px) {
+    .content {
+        height: 200px; /* Set the height for small screens */
+    }
+}
+
+.custom-button {
+    position: absolute;
+    bottom: 20px; /* Adjust the button's vertical position as needed */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%);
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
